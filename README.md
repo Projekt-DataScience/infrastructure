@@ -5,12 +5,7 @@ Deployment Code
 # Deploying only backend
 **You need to be logged in via Docker CLI to Github.** Tutorial: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry
 
-1. If you want to deploy the backend, then you should use `docker-compose-backend.yml`. First of all download the following files:
-
-- https://raw.githubusercontent.com/Projekt-DataScience/infrastructure/main/docker-compose-backend.yml?token=GHSAT0AAAAAAB2N4VD4NEGWZ6EGESWMBQD6Y4UY4QA
-- https://raw.githubusercontent.com/Projekt-DataScience/infrastructure/main/example.env?token=GHSAT0AAAAAAB2N4VD5DJLW4YVL2I3AGUOKY4UY4ZQ
-
-Alternativ way would be to clone this repository:
+1. Clone the repository
 
 ```
 git clone https://github.com/Projekt-DataScience/infrastructure.git
