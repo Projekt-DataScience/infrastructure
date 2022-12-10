@@ -3,7 +3,7 @@
 Deployment Code
 
 # Deploying only backend
-**You need to be logged in via Docker CLI to Github.** Tutorial: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry
+**You need to be logged in via Docker CLI to Github.** [Tutorial](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry) 
 
 1. Clone the repository
 
@@ -41,7 +41,8 @@ Currently this command will start the following:
 - PgAdmin on port 8080
 - Audit Service on port 8081
 
-## Updating a image
+## Updating images
+**All the data inside the database will be lost**
 
 ```
 docker-compose -f docker-compose-backend.yml rm
