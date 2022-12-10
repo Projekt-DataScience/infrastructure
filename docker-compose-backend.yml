@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  web:
+  audit:
     image: ghcr.io/projekt-datascience/backend-audit:release
     depends_on:
       db:
