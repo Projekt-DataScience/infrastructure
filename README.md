@@ -44,3 +44,12 @@ Currently this command will start the following:
 - Database Server on port 5432 (if you have not changed the `DB_PORT` environment variable)
 - PgAdmin on port 8080
 - Audit Service on port 8081
+
+## Updating a image
+
+```
+docker-compose -f docker-compose-backend.yml rm
+docker volume rm infrastructure_manager_volume
+docker-compose -f docker-compose-backend.yml pull
+docker-compose -f docker-compose-backend.yml up
+```
