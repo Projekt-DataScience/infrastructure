@@ -42,6 +42,7 @@ Currently this command will start the following:
 - Audit Service on port 8081
 
 ## Updating a image
+**All the data inside the database will be lost**
 
 ```
 docker-compose -f docker-compose-backend.yml rm
