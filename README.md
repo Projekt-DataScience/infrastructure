@@ -35,7 +35,7 @@ Now you should have a .env file
 4. Start the backend with the following command:
 
 ```
-docker-compse -f docker-compose-backend.yml up
+docker-compose -f docker-compose-backend.yml up
 ```
 
 Currently this command will start the following:
