@@ -3,7 +3,7 @@
 Deployment Code
 
 # Deploying only backend
-**You need to be logged in via Docker CLI to Github.** Tutorial: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry
+**You need to be logged in via Docker CLI to Github.** [Tutorial](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry) 
 
 1. Clone the repository
 
