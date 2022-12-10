@@ -1,4 +1,5 @@
 # Infrastructure
+
 Deployment Code
 
 # Deploying only backend
@@ -39,6 +40,7 @@ docker-compse -f docker-compose-backend.yml up
 ```
 
 Currently this command will start the following:
-- Database Server on port 5432  (if you have not changed the `DB_PORT` environment variable)
+
+- Database Server on port 5432 (if you have not changed the `DB_PORT` environment variable)
 - PgAdmin on port 8080
-- Audit Service on port 8000
+- Audit Service on port 8081
