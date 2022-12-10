@@ -41,7 +41,7 @@ Currently this command will start the following:
 - PgAdmin on port 8080
 - Audit Service on port 8081
 
-## Updating a image
+## Updating images
 **All the data inside the database will be lost**
 
 ```
