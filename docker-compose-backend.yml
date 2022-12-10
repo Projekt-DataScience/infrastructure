@@ -45,5 +45,20 @@ services:
     networks:
       - microservice-network
 
+  manager:
+    image: ghcr.io/projekt-datascience/manager:release
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - manager_volume:/root
+    networks:
+      - microservice-network
+
 networks:
   microservice-network:
+
+volumes:
+  manager_volume:
