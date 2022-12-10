@@ -3,6 +3,7 @@
 Deployment Code
 
 # Deploying only backend
+**You need to be logged in via Docker CLI to Github.** Tutorial: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry
 
 1. If you want to deploy the backend, then you should use `docker-compose-backend.yml`. First of all download the following files:
 
