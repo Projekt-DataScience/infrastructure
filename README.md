@@ -42,11 +42,23 @@ Currently this command will start the following:
 - Audit Service on port 8081
 
 ## Updating images
+
+### Updating everything (including database structure)
 **All the data inside the database will be lost**
+
+The following commands should be run, if the database structure changed. That happens when new models/tables are added to backend-db-lib or existing models/tables are changed.
 
 ```
 docker-compose -f docker-compose-backend.yml rm
 docker volume rm infrastructure_manager_volume
+docker-compose -f docker-compose-backend.yml pull
+docker-compose -f docker-compose-backend.yml up
+```
+
+### Updating only images, without updating database structure
+This won't delete any data in the database. Stop already running containers of this infrastructure and run the following commands:
+
+```
 docker-compose -f docker-compose-backend.yml pull
 docker-compose -f docker-compose-backend.yml up
 ```
