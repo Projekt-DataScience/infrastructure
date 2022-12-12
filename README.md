@@ -35,6 +35,12 @@ Now you should have a .env file
 docker-compose -f docker-compose-backend.yml up
 ```
 
+Or you can also use make:
+
+```
+make start-backend
+```
+
 Currently this command will start the following:
 
 - Database Server on port 5432 (if you have not changed the `DB_PORT` environment variable)
@@ -55,10 +61,22 @@ docker-compose -f docker-compose-backend.yml pull
 docker-compose -f docker-compose-backend.yml up
 ```
 
+OR:
+
+```
+make reset-db
+```
+
 ### Updating only images, without updating database structure
 This won't delete any data in the database. Stop already running containers of this infrastructure and run the following commands:
 
 ```
 docker-compose -f docker-compose-backend.yml pull
 docker-compose -f docker-compose-backend.yml up
+```
+
+OR:
+
+```
+make update
 ```
