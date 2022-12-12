@@ -1,17 +1,33 @@
 version: '3.8'
 
 services:
+  gateway:
+    image: ghcr.io/projekt-datascience/gateway:release
+    restart: always
+    ports:
+      - "0.0.0.0:80:80"
+    depends_on:
+      - audit
+      - user-management
+    networks:
+      - service-network
+
   audit:
     image: ghcr.io/projekt-datascience/backend-audit:release
     depends_on:
       db:
         condition: service_healthy
-    ports:
-      - 8081:8000
     networks:
-      - microservice-network
+      - service-network
     env_file:
       - .env
+
+  user-management:
+    image: ghcr.io/projekt-datascience/backend-user-management:release
+    env_file:
+      - .env
+    networks:
+      - service-network
 
   db:
     image: postgres:latest
@@ -24,7 +40,7 @@ services:
     ports:
       - ${DB_PORT}:${DB_PORT}
     networks:
-      - microservice-network
+      - service-network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
       interval: 10s
@@ -43,7 +59,7 @@ services:
     ports:
       - 8080:80
     networks:
-      - microservice-network
+      - service-network
 
   manager:
     image: ghcr.io/projekt-datascience/manager:release
@@ -55,10 +71,10 @@ services:
     volumes:
       - manager_volume:/root
     networks:
-      - microservice-network
+      - service-network
 
 networks:
-  microservice-network:
+  service-network:
 
 volumes:
   manager_volume:
