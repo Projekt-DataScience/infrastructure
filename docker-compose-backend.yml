@@ -29,6 +29,13 @@ services:
     networks:
       - service-network
 
+  tasks:
+    image: ghcr.io/projekt-datascience/backend-tasks:release
+    env_file:
+      - .env
+    networks:
+      - service-network
+
   db:
     image: postgres:latest
     restart: always
