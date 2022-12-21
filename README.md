@@ -80,3 +80,11 @@ OR:
 ```
 make update
 ```
+
+## Updating changes to the environment variable
+
+```
+git pull
+cp example.env .env
+docker-compose -f docker-compose-backend.yml up
+```
