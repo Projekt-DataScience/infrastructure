@@ -1,6 +1,9 @@
 # Infrastructure
 
-Deployment Code
+Deployment Code to deploy the web application. After running docker-compose-backend.yml, the containers will be deployed in the following schema:
+
+![Deployment](https://user-images.githubusercontent.com/39222224/210966746-f29147da-bfb3-4b8d-a077-d022bbbda61e.jpg)
+
 
 # Deploying only backend
 **You need to be logged in via Docker CLI to Github.** [Tutorial](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry) 
